@@ -34,7 +34,7 @@ class Analytics {
 	 */
 	public function __construct() {
 		add_filter( 'woocommerce_component_settings_preload_endpoints', array( $this, 'add_preload_endpoints' ) );
-		add_filter( 'wc_admin_get_user_data_fields', array( $this, 'add_user_data_fields' ) );
+		add_filter( 'woocommerce_admin_get_user_data_fields', array( $this, 'add_user_data_fields' ) );
 		add_action( 'admin_menu', array( $this, 'register_pages' ) );
 	}
 
@@ -75,14 +75,23 @@ class Analytics {
 	 * Registers report pages.
 	 */
 	public function register_pages() {
+		$features = wc_admin_get_feature_config();
+
 		$report_pages = array(
 			array(
 				'id'       => 'woocommerce-analytics',
 				'title'    => __( 'Analytics', 'woocommerce-admin' ),
-				'path'     => '/analytics/revenue',
+				'path'     => '/analytics/overview',
+				'path'     => $features['homepage'] ? '/analytics/overview' : '/analytics/revenue',
 				'icon'     => 'dashicons-chart-bar',
 				'position' => 56, // After WooCommerce & Product menu items.
 			),
+			$features['homepage'] ? array(
+				'id'       => 'woocommerce-analytics-overview',
+				'title'    => __( 'Overview', 'woocommerce-admin' ),
+				'parent' => 'woocommerce-analytics',
+				'path'     => '/analytics/overview',
+			) : null,
 			array(
 				'id'     => 'woocommerce-analytics-revenue',
 				'title'  => __( 'Revenue', 'woocommerce-admin' ),
@@ -134,8 +143,8 @@ class Analytics {
 			array(
 				'id'     => 'woocommerce-analytics-customers',
 				'title'  => __( 'Customers', 'woocommerce-admin' ),
-				'parent' => 'woocommerce-analytics',
-				'path'   => '/analytics/customers',
+				'parent' => 'woocommerce',
+				'path'   => '/customers',
 			),
 			array(
 				'id'     => 'woocommerce-analytics-settings',

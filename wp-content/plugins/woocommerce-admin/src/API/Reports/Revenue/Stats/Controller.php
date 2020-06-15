@@ -58,6 +58,7 @@ class Controller extends \WC_REST_Reports_Controller implements ExportableInterf
 		$args['orderby']   = $request['orderby'];
 		$args['order']     = $request['order'];
 		$args['segmentby'] = $request['segmentby'];
+		$args['fields']    = $request['fields'];
 
 		return $args;
 	}
@@ -211,8 +212,8 @@ class Controller extends \WC_REST_Reports_Controller implements ExportableInterf
 				'format'      => 'currency',
 			),
 			'refunds'        => array(
-				'title'       => __( 'Refunds', 'woocommerce-admin' ),
-				'description' => __( 'Total of refunds.', 'woocommerce-admin' ),
+				'title'       => __( 'Returns', 'woocommerce-admin' ),
+				'description' => __( 'Total of returns.', 'woocommerce-admin' ),
 				'type'        => 'number',
 				'context'     => array( 'view', 'edit' ),
 				'readonly'    => true,
@@ -450,7 +451,7 @@ class Controller extends \WC_REST_Reports_Controller implements ExportableInterf
 			'date'         => __( 'Date', 'woocommerce-admin' ),
 			'orders_count' => __( 'Orders', 'woocommerce-admin' ),
 			'total_sales'  => __( 'Total Sales', 'woocommerce-admin' ),
-			'refunds'      => __( 'Refunds', 'woocommerce-admin' ),
+			'refunds'      => __( 'Returns', 'woocommerce-admin' ),
 			'coupons'      => __( 'Coupons', 'woocommerce-admin' ),
 			'taxes'        => __( 'Taxes', 'woocommerce-admin' ),
 			'shipping'     => __( 'Shipping', 'woocommerce-admin' ),

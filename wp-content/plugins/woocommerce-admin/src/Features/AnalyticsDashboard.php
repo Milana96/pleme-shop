@@ -39,7 +39,7 @@ class AnalyticsDashboard {
 	 */
 	public function __construct() {
 		add_filter( 'woocommerce_component_settings_preload_endpoints', array( $this, 'add_preload_endpoints' ) );
-		add_filter( 'wc_admin_get_user_data_fields', array( $this, 'add_user_data_fields' ) );
+		add_filter( 'woocommerce_admin_get_user_data_fields', array( $this, 'add_user_data_fields' ) );
 		add_action( 'admin_menu', array( $this, 'register_page' ) );
 		// priority is 20 to run after https://github.com/woocommerce/woocommerce/blob/a55ae325306fc2179149ba9b97e66f32f84fdd9c/includes/admin/class-wc-admin-menus.php#L165.
 		add_action( 'admin_head', array( $this, 'update_link_structure' ), 20 );
@@ -71,6 +71,7 @@ class AnalyticsDashboard {
 				'dashboard_chart_type',
 				'dashboard_chart_interval',
 				'dashboard_leaderboard_rows',
+				'homepage_stats',
 			)
 		);
 	}
@@ -79,10 +80,14 @@ class AnalyticsDashboard {
 	 * Registers dashboard page.
 	 */
 	public function register_page() {
+		$features = wc_admin_get_feature_config();
+		$id       = $features['homepage'] ? 'woocommerce-home' : 'woocommerce-dashboard';
+		$title    = $features['homepage'] ? __( 'Home', 'woocommerce-admin' ) : __( 'Dashboard', 'woocommerce-admin' );
+
 		wc_admin_register_page(
 			array(
-				'id'     => 'woocommerce-dashboard',
-				'title'  => __( 'Dashboard', 'woocommerce-admin' ),
+				'id'     => $id,
+				'title'  => $title,
 				'parent' => 'woocommerce',
 				'path'   => self::MENU_SLUG,
 			)

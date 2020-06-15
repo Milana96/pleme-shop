@@ -90,7 +90,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 
 		if ( ! $note ) {
 			return new \WP_Error(
-				'woocommerce_admin_notes_invalid_id',
+				'woocommerce_note_invalid_id',
 				__( 'Sorry, there is no resource with that ID.', 'woocommerce-admin' ),
 				array( 'status' => 404 )
 			);
@@ -203,7 +203,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 
 		if ( ! $note ) {
 			return new \WP_Error(
-				'woocommerce_admin_notes_invalid_id',
+				'woocommerce_note_invalid_id',
 				__( 'Sorry, there is no resource with that ID.', 'woocommerce-admin' ),
 				array( 'status' => 404 )
 			);
@@ -474,7 +474,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 					'readonly'    => true,
 				),
 				'is_snoozable'      => array(
-					'description' => __( 'Whether or a user can request to be reminded about the note.', 'woocommerce-admin' ),
+					'description' => __( 'Whether or not a user can request to be reminded about the note.', 'woocommerce-admin' ),
 					'type'        => 'boolean',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
