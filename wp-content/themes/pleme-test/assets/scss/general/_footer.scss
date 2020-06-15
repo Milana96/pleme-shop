@@ -1,0 +1,104 @@
+.footer_style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 1em 4em 2em;
+  background-color: #f3f3f3;
+  color: rgba(0, 0, 0, 0.637);
+  @include max-mq($ls) {
+    flex-direction: column;
+    padding: 4em 4em 2em;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+
+  h4 {
+    color: $primary_theme_color;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  h4,
+  p {
+    margin: 0;
+    padding: 15px 0;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+      @include max-mq($mb) {
+        word-spacing: 0;
+        letter-spacing: 0;
+      }
+  }
+
+  
+  input[type="email"] {
+    background: #f3f3f3;
+  }
+ 
+  .social-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      word-spacing: 0;
+      letter-spacing: 0;
+    }
+    a {
+      text-decoration: none;
+      list-style: none;
+      color: rgba(0, 0, 0, 0.637);
+        &:hover {
+          color: #350606;
+          transition: all ease-in .4s;
+        }
+    }
+   
+  }
+  .menu-footer-menu-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+        #menu-footer-menu {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+            li {
+                list-style: none;
+                padding: 10px 0;
+                a {
+                    text-decoration: none;
+                    list-style: none;
+                    color: rgba(0, 0, 0, 0.637);
+                    &:hover {
+                      color: #350606;
+                      transition: all ease-in .4s;
+                    }
+                }
+            }
+        }
+  }
+  .social-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+.site-info {
+    background: #c7a77f !important;
+    text-align: center;
+    .container {
+      padding: 5px 0;
+    }
+}
+

@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+    .logo-menu-wrapper {
+      @include max-mq($ls) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    #site-navigation {
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      top: 0;
+      padding: 3em 2em 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      @include max-mq($ls) {
+        position: relative;
+        background: none;
+        padding: 0;
+      }
+        .primary-menu {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          background: rgba(black, 0.5);
+          @include max-mq($ls) {
+            background-color: black;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+          }
+        }
+    }
+    .cart-icon {
+      width: 35px;
+      margin: 0 0 60px 20px;
+      position: relative;
+        @include max-mq($ls) {
+          margin: 0 0 0 20px;
+        }
+        &:hover {
+          border-bottom: none !important;
+        }
+        &::before {
+          position: absolute;
+          top: -2px;
+          left: -25px;
+          right: 0;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f07a"; 
+            @include max-mq($ls) {
+              top: 0;
+            }
+        }
+    }
+}
+.site-header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 9999;
+}
+// logo
+.custom-logo-link {
+  position: fixed;
+  top: 0;
+  left: 3px;
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 100px;
+  @include max-mq($ls) {
+    position: unset;
+  }
+}

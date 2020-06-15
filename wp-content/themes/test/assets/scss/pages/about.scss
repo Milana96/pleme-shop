@@ -1,0 +1,111 @@
+#primary {
+    .site-main {
+        .about-image-section {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            padding-top: 1em;
+            height: 500px;
+                .about-1 {
+                    display: flex;
+                    flex: 0 0 50%;
+                    @include max-mq($sm) {
+                        flex: 0 0 100%;
+                    }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+                }
+        }
+        .about {
+            position: relative;
+            padding: 4em 5em;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            h1 {
+                @include use-font($family, $weight);
+                border-bottom: 1px solid $dark_grey;
+                padding-bottom: 5px;
+            }
+            .intro {
+                height: auto;
+                width: 100%;
+                padding: 2em 8em;
+                @include max-mq($sm) {
+                    padding: 2em 1em;
+                }
+                p {
+                    word-spacing: 5px;
+                }
+            }
+            .image-story-section {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                padding-top: 3em;
+                position: relative;
+                    @include max-mq($sm) {
+                        flex-direction: column;
+                    }
+                    .image-story-1 {
+                        display: flex;
+                        flex: 0 0 50%;
+                        height: 600px;
+                            img {
+                                display: block;
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+                            .beige-womans {
+                                @include max-mq($sm) {
+                                    display: none;
+                                }
+                            }
+                            .opacity-image {
+                                @include max-mq($sm) {
+                                    opacity: 0.4;
+                                }
+                            }
+                    }
+                    .black-image {
+                        @include max-mq($sm) {
+                            padding-top: 1em;
+                        }
+                    } 
+                    .image-story-2 {
+                        position: absolute;
+                        top: 25%;
+                        left: 65%;
+                            @include max-mq($sm) {
+                                top: 30%;
+                                left: 30%;
+                            }
+                            img {
+                                width: 60%;
+                                margin: 0 auto;
+                                border: 5px solid $primary_theme_color;
+                            }
+                    }
+                    .commitment {
+                        display: flex;
+                        flex: 0 0 50%;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        font-size: 2em;
+                            @include max-mq($sm) {
+                                padding-top: 1em;
+                            }
+                            @include max-mq($mb) {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                    }
+            }
+        }
+    }
+}

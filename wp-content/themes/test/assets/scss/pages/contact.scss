@@ -1,0 +1,246 @@
+//style for buttons
+.contact-form-link {
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid $primary_theme_color;
+  border-radius: 3px;
+  width: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: $primary_theme_color;
+  background: $white;
+  transition: all .4s;
+}
+
+.help {
+  margin-top: 2em;
+}
+
+.reset {
+  width: 180px;
+  cursor: pointer;
+}
+
+.contact-form-link:hover,
+.contact-form-link:active {
+  background-color: $primary_theme_color;
+  color: white;
+  transition: 0.4s all;
+  text-decoration: none;
+}
+
+.contact_style {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 4em 1em;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.637);
+  @include max-mq($sm) {
+    flex-direction: column;
+    padding: 2em 1em 2em;
+  }
+  .contact-form {
+    display: inline-block;
+    flex: 0 0 70%;
+    padding: 4em 1em 1em;
+    text-align: center;
+    .list {
+      padding-top: 4em;
+    }
+    .question {
+      font-size: 35px;
+      margin-bottom: 1em;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+      @include max-mq($sm) {
+        padding: 2em 0 0 4em;
+      }
+      @include max-mq($mb) {
+        padding-left: 1em;
+      }
+  }
+
+  .service {
+    width: 130px;
+    border-bottom: 1px solid #3a3838;
+    padding-bottom: 5px;
+    font-weight: 100;
+  }
+  .more {
+    min-width: 360px;
+    max-width: 400px;
+  }
+}
+
+//Sign Up form
+.sign-form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin: 5em auto 0;
+  padding: 2em 2em 4em;
+
+  @include max-mq($sm) {
+    flex-direction: column;
+  }
+
+  //Sign in form
+  .sign-in {
+    height: 100%;
+    .signin-email {
+      margin-top: 3em;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex: 0 0 30%;
+    flex-direction: column;
+    float: left;
+    clear: both;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark_grey;
+    padding: 3em;
+    margin-left: 2px;
+
+      @include max-mq($mb) {
+        flex: 0 0 100%;
+        margin-bottom: 2em;
+      }
+  }
+
+  .map {
+    display: flex;
+    flex: 0 0 70%;
+    height: 600px;
+    float: right;
+    clear: both;
+
+    @include max-mq($mb) {
+      flex: 0 0 100%;
+    }
+  }
+
+}
+//Style for sign up and sign in form 
+.form-heading {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+    @include max-mq($ls) {
+      padding: 1em 0;
+    }
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  div.input {
+    position: relative;
+    width: 100%;
+  }
+  input {
+    padding: 5px 20px 5px 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: white;
+  }
+  input[type="email"],
+  input[type="password"] {
+    height: 40px;
+  }
+  input:first-child {
+    margin-top: 0;
+  }
+  label {
+    display: block;
+    text-align: left;
+    background: #fff;
+    height: 15px;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: auto;
+    line-height: 1;
+  }
+  label[for="terms"] {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 30px;
+    padding: 2px 0 0 30px;
+  }
+  .input.invalid input {
+    border: 1px solid $primary_theme_color;
+    padding: 5px 10px;
+  }
+
+  .input.invalid label,
+  label {
+    color: $primary_theme_color;
+  }
+  //Style for checkbox
+  input[type="checkbox"] {
+    opacity: 0;
+  }
+  .checkbox label::before {
+    content: "";
+    top: 3px;
+    left: 10px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid;
+  }
+  .checkbox label::before,
+  .checkbox label::after {
+    position: absolute;
+  }
+  .checkbox label::after {
+    left: 13px;
+    top: 6px;
+  }
+  /*Hide the checkmark by default*/
+  .checkbox input[type="checkbox"] + label::after {
+    content: none;
+  }
+  /*Unhide the checkmark on the checked state*/
+  .checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+  .checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+  }
+  .submit {
+    text-align: center;
+    margin-top: 3em;
+  }
+  .resetPassword {
+    color: black;
+    text-decoration: none;
+      &:hover {
+        color: black;
+        text-decoration: underline;
+      }
+  }
+}

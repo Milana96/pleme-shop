@@ -1,0 +1,106 @@
+body.blog {
+  .content-area {
+    width: 100%;
+    margin: 5em auto;
+    padding: 0 15px;
+    max-width: 1440px;
+    .site-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+        @include max-mq($sm) {
+          flex-direction: column;
+        }
+      article {
+        display: flex;
+        flex: 0 0 47%;
+        flex-direction: column;
+        margin: 1em;
+        @include max-mq($sm) {
+          margin-bottom: 2em;
+        }
+        .entry-header {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            order: 2;
+        }
+        .entry-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            order: 3; 
+        }
+        .entry-footer {
+            display: flex;
+            flex-grow: 1;
+            order: 4;
+        }
+
+        .post-thumbnail {
+        display: flex;
+        flex-grow: 1;
+        order: 1;
+          img {
+            width: 600px;
+            height: 500px;
+            &:hover {
+              border: 10px solid black;
+            }
+          }
+        }
+        .more-link {
+          background: $primary_theme_color;
+          color: white;
+          padding: 10px 8px;
+          border-radius: 10px;
+          &:hover {
+            background: black;
+            transition: all 0.4s ease-in;
+          }
+        }
+        .edit-link {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+a {
+  color: $dark_grey;
+  text-decoration: none;
+  &:active {
+    color: $dark_grey;
+  }
+}
+
+// Single post style
+body.single-post {
+  .site-main {
+    background: #f7f6f2;
+  }
+  article {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    span {
+      font-weight: bold;
+    }
+  }
+}

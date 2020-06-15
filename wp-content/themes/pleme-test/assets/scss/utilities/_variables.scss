@@ -1,0 +1,87 @@
+/**************************************************
+* In this file call fonts and set all variables
+**************************************************/
+// Colors:
+$main-dark: #000;
+$main-white: #fff;
+$gray: #67696B;
+
+/*Font Variables*/
+$primary-font: 'Montserrat', sans-serif;
+
+// Font Weight
+$font-weight-regular: 400; 
+$font-weight-bold: 600;
+
+//Font Size
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-small: 14px;
+
+$font-size-h1: 50px;
+$h1-line: 1;
+$font-size-h2: 36px;
+$h2-line: 1;
+$font-size-h3: 24px;
+$h3-line: 1;
+$font-size-h4: 20px;
+$h4-line: 1;
+$font-size-h5: 18px;
+$h5-line: 1;
+$font-size-h6: 15px;
+$h6-line: 1;
+$heading-line-height: 1;
+
+/******************************************************************
+* If use min-width for resposnive 
+* on breakpoitn variables add 1px in code
+******************************************************************/
+// Breakpoints
+$bp-desktop: 1920px;
+
+$bp-laptop: 1600px;
+$bp-laptop-mac: 1440px;
+$bp-laptop-xl: 1366px;
+
+$bp-tablet-xl: 1280px;
+$bp-tablet-md: 1024px;
+$bp-tablet-sm: 960px;
+
+$bp-mobile-xl: 480px;
+$bp-mobile-md: 420px;
+$bp-mobile-sm: 375px;
+$bp-mobile-xs: 360px;
+$bp-mobile-2xs: 320px;
+
+// Bootstrap breakpoints
+$bp-xl: 1199px;
+$bp-lg: 991px;
+$bp-md: 767px;
+$bp-sm: 575px;
+
+// Bootstrap container
+$container-width: 1170px;
+
+$primary_theme_color: #c7a77f;
+$secondary_theme_color: #350606;
+$tertiary_theme_color: #ff962e;
+$quaternary_theme_color: #edbd35;
+$gray: #67696B;
+$dark_grey: rgb(58, 56, 56);
+$white: #ffffff;
+$light_grey: rgb(243, 243, 243);
+$border-width: 30px;
+$family: 'Montserrat', sans-serif;
+$headers_weight: 900;
+$weight: 100;
+
+// Breakpoints
+$mac: 1440px;
+$lt: 1366px;
+$ls: 1280px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$mb: 480px;
+$ip: 420px;
+$xs: 320px;

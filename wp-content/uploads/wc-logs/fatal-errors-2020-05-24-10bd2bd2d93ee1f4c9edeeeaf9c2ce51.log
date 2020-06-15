@@ -1,0 +1,10 @@
+2020-05-24T20:20:42+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in C:\xampp\new_version\htdocs\pleme-test\wp-content\themes\pleme-test\functions.php:183
+Stack trace:
+#0 C:\xampp\new_version\htdocs\pleme-test\wp-settings.php(497): include()
+#1 C:\xampp\new_version\htdocs\pleme-test\wp-config.php(90): require_once('C:\\xampp\\new_ve...')
+#2 C:\xampp\new_version\htdocs\pleme-test\wp-load.php(37): require_once('C:\\xampp\\new_ve...')
+#3 C:\xampp\new_version\htdocs\pleme-test\wp-blog-header.php(13): require_once('C:\\xampp\\new_ve...')
+#4 C:\xampp\new_version\htdocs\pleme-test\index.php(17): require('C:\\xampp\\new_ve...')
+#5 {main}
+  thrown in C:\xampp\new_version\htdocs\pleme-test\wp-content\themes\pleme-test\functions.php on line 183
+

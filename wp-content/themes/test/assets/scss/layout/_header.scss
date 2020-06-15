@@ -1,0 +1,368 @@
+//body class to prevent scrolling when you open mobile menu
+.overflow {
+  overflow-y: hidden;
+  @include max-mq($ls) {
+    .language-bar {
+      display: block;
+    }
+  }
+}
+
+// Click to open menu
+.top-header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 9999;
+  .open-menu {
+    display: none;
+    width: 30px;
+    height: 25px;
+    margin: 35px 25px 0 0;
+    float: right;
+    cursor: pointer;
+
+    @include max-mq($ls) {
+      display: block;
+    }
+  }
+
+  .hideMenu {
+    display: none;
+  }
+
+  //Navigation menu
+  nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    background: rgba(black, 0.5);
+    @include max-mq($ls) {
+      background-color: black;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      transform-origin: left;
+    }
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 3px;
+      z-index: 2;
+      .logo-img {
+        display: block;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    // Click to close menu
+    .close-button {
+      display: none;
+      background: transparent;
+      color: white;
+      width: 18px;
+      float: right;
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      top: 38px;
+      right: 35px;
+      @include max-mq($ls) {
+        display: block;
+      }
+    }
+
+    ul {
+      width: 80%;
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+        @include max-mq($ls) {
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+        }
+     
+        .openDropdown:hover {
+          .dropdown-menu {
+            margin-top: 26px;
+            @include min-mq($ls) {
+            background: rgba(black, 0.5);
+              height: 200px ;
+              visibility: visible;
+            }
+              @include max-mq($ls) {
+                position: inherit;
+                transition: all 0.4s;
+                background: rgba($primary_theme_color, 0.5);
+              }
+          }
+        }
+        li {
+          position: relative;
+          padding: 60px 30px;
+          opacity: 0;
+          @include max-mq($mb) {
+            padding: 40px 0 0 0;
+          }
+          @include max-mq($ls) {
+            padding: 60px 0 0 0;
+            width: 100%;
+          }
+          .dropdown {
+            width: 100%;
+            @include min-mq($ls + 1px) {
+              position: absolute;
+              left: 0;
+              top: 100px;
+            }
+            .dropdown-menu {
+              @include max-mq($ls) {
+                margin-top: 0;
+              }
+              transition: all .4s;
+              visibility: hidden;
+              height: 0px;
+              visibility: hidden;
+              overflow: hidden;
+              background: transparent;
+              li {
+                  padding: 8px 0 0 30px;
+                  width: 100%;
+                  @include max-mq($ls) {
+                    padding: 15px 0 0 0;
+                  }
+                a {
+                  display: block;
+                  color: $light_grey;
+                  font-size: 18px;
+                  &:hover {
+                    border-bottom: none;
+                  }
+                }
+              }
+              //dropdown menu on tablet/mobiles
+              @include max-mq($ls) {
+                position: inherit;
+                background: transparent;
+              }
+
+            }
+            .showDropDown {
+              @include max-mq($ls) {
+                height: 200px ;
+                visibility: visible;
+                padding-top: 0.5em;
+                margin-top: 25px !important;
+              }
+            }
+
+          }
+          a {
+            color: $light_grey;
+            font-weight: bold;
+            font-size: 1.4em;
+            text-decoration: none;
+            padding-bottom: 2px;
+            &:hover {
+              border-bottom: 2px solid white;
+              transition: all 0.4s;
+            }
+            @include max-mq($ls) {
+              font-size: 1em;
+              text-transform: uppercase;
+            }
+            
+          .caret-down {
+            display: none;
+            color: $primary_theme_color;
+            margin-left: 10px;
+            @include max-mq($ls) {
+              display: inline-block;
+            }
+          }
+          }
+        }
+    }
+  }
+}
+
+//Show navigation menu on click
+.showMenu {
+    -webkit-animation: slide-menu .4s ease-in forwards;
+    animation: slide-menu .4s ease-in forwards;
+    .close-button {
+      -webkit-animation: show-x 1s 1s forwards;
+      animation: show-x 1s forwards;
+    }
+}
+
+// Animation for nav list item
+ul.top-navigation li:nth-of-type(1) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1s ease-in-out;
+}
+
+ul.top-navigation li:nth-of-type(2) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1.2s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1.2s ease-in-out;
+}
+
+ul.top-navigation li:nth-of-type(3) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1.6s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1.6s ease-in-out;
+}
+
+ul.top-navigation li:nth-of-type(4) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+}
+
+ul.top-navigation li:nth-of-type(5) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+}
+
+ul.top-navigation li:nth-of-type(6) {
+  -webkit-animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+  animation: menu-item-anim 0.6s forwards 1.8s ease-in-out;
+}
+
+//animation fro dropdownmenu
+ul.top-navigation li.dropdown-li:nth-of-type(1) {
+  animation-delay: 0s;
+}
+ul.top-navigation li.dropdown-li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+ul.top-navigation li.dropdown-li:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+ul.top-navigation li.dropdown-li:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+ul.top-navigation li.dropdown-li:nth-of-type(5) {
+  animation-delay: 0.8s;
+}
+ul.top-navigation li.dropdown-li:nth-of-type(6) {
+  animation-delay: 0.8s;
+}
+
+//Animation for logo image
+.fadeIn {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Slide animation fro navigation menu
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+// Transition for open/close buttons
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Animation for nav list items
+@-webkit-keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.language-bar {
+  position: fixed;
+  top: 42px;
+  right: 2px;
+    @include max-mq($ls) {
+      top: 35px;
+      right: 100px;
+      display: none;
+    }
+    button {
+      background: transparent;
+      border: none;
+      color: white;
+    }
+    button:nth-child(2) {
+      margin-left: -15px;
+    }
+}

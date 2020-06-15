@@ -1,0 +1,187 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: $main-dark;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  line-height: 1em;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+  padding-left: .6em;
+  width: 100%;
+}
+
+input[type="submit"],
+button[type="submit"] {
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: $main-dark;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  line-height: 1.15em;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  background: #c7a77f;
+  color: white;
+  margin: 0px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+    &:hover {
+      background-color: black;
+      transition: all .4s ease-in;
+    }
+}
+
+/*---- Placeholder ----*/
+::-webkit-input-placeholder {
+  opacity: 1;
+}
+\:-moz-placeholder {
+  opacity: 1;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+\:-ms-input-placeholder {
+  opacity: 1;
+}
+*::-webkit-input-placeholder {
+  opacity: 1;
+}
+*:-moz-placeholder {
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  opacity: 1;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  .form-heading {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    @include max-mq($ls) {
+      padding: 1em 0;
+    }
+  }
+  div.input {
+    position: relative;
+    width: 100%;
+  }
+  input {
+    padding: 5px 20px 5px 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: white;
+  }
+  input[type="email"] {
+    height: 25px;
+    margin-top: 0;
+  }
+  label {
+    display: block;
+    text-align: center;
+    height: 15px;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: auto;
+    line-height: 1;
+  }
+  label[for="terms"] {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 30px;
+    padding: 2px 0 0 30px;
+  }
+  .input.invalid input {
+    border: 1px solid $primary_theme_color;
+    padding: 5px 10px;
+  }
+
+  .input.invalid label,
+  label {
+    color: $primary_theme_color;
+  }
+  //Style for checkbox
+  input[type="checkbox"] {
+    opacity: 0;
+  }
+  .checkbox label::before {
+    content: "";
+    top: 3px;
+    left: 10px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid;
+  }
+  .checkbox label::before,
+  .checkbox label::after {
+    position: absolute;
+  }
+  .checkbox label::after {
+    left: 13px;
+    top: 6px;
+  }
+  /*Hide the checkmark by default*/
+  .checkbox input[type="checkbox"] + label::after {
+    content: none;
+  }
+  /*Unhide the checkmark on the checked state*/
+  .checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+  .checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+  }
+  .submit {
+    text-align: center;
+  }
+  .resetPassword {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+

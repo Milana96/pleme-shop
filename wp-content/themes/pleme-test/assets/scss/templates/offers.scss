@@ -1,0 +1,53 @@
+.offers {
+  height: 250px;
+  width: 100%;
+  margin-top: 1em;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas: "quality safe delivery shipping";
+  @include max-mq($ls) {
+    grid-template-columns: repeat(2, 50%);
+    height: 400px;
+    grid-gap: 1%;
+    grid-template-areas: "quality safe" "delivery shipping";
+    margin-top: 8em;
+  }
+  @include max-mq($mb) {
+    grid-template-columns: 100%;
+    grid-gap: 1%;
+    grid-template-areas: "quality" "safe" "delivery" "shipping";
+    height: 800px;
+  }
+  .quality,
+  .safe,
+  .delivery,
+  .shipping {
+    display: grid;
+    justify-items: center;
+    align-items: flex-start;
+    padding: 5em 1em;
+    text-transform: uppercase;
+    background: $light_grey;
+    text-align: center;
+    color: black;
+    p {
+      span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+          i {
+            display: flex;
+            flex-grow: 1;
+          }
+      }
+    }
+  }
+}
+
+.offers-single {
+  margin-top: 3em;
+}

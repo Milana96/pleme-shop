@@ -1,0 +1,33 @@
+.contact_style {
+    .services {
+        padding: 0 4em 4em;
+        text-align: justify;
+            @include max-mq($mb) {
+                padding: 0 1em 1em;
+            }
+            h1 {
+                padding-bottom: 1em;
+            }
+            .important {
+                font-weight: bold;
+            }
+            .store {
+                padding-top: 1em;
+            }
+            .extended {
+                width: 320px;
+            }
+            .privacy-extended {
+                width: 700px;
+            }
+            ul.exchanges {
+                li {
+                    text-indent: 2em;
+                    list-style: circle;
+                }
+            }
+            .empty {
+                display: none;
+            }
+    }
+}

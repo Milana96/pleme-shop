@@ -1,0 +1,49 @@
+{
+  "name": "wp-gulp",
+  "version": "1.0.0",
+  "description": "Custom gulp file for Pleme Theme theme",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-wp-pot": "^1.2.2",
+    "imagemin-pngcrush": "^6.0.0",
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "> 0.3%",
+    "last 7 versions",
+    "Android >= 4",
+    "Firefox >= 20",
+    "iOS >= 8"
+  ],
+  "keywords": [
+    "custom",
+    "gulp",
+    "base",
+    "theme",
+    "js",
+    "scss"
+  ],
+  "author": "Pleme Theme",
+  "license": "ISC"
+}

@@ -1,0 +1,9 @@
+// Define custom extensions
+%clearfix{
+   &:before,
+   &:after{
+      content: '';
+      display: table;
+      width: 100%;
+   }
+}
