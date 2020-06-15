@@ -42,3 +42,4 @@
 [2020-05-23 13:07:08] WARNING: Form 961 > mila*****************@gm***.com is already subscribed to the selected list(s)
 [2020-05-23 13:10:07] WARNING: Form 961 > mila*****************@gm***.com is already subscribed to the selected list(s)
 [2020-06-03 09:52:40] WARNING: Form 961 > mila*****************@gm***.com is already subscribed to the selected list(s)
+[2020-06-15 12:57:14] WARNING: Form 961 > mila*****************@gm***.com is already subscribed to the selected list(s)
