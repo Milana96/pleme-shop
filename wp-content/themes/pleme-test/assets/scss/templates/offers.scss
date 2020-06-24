@@ -8,16 +8,18 @@
   grid-template-areas: "quality safe delivery shipping";
   @include max-mq($ls) {
     grid-template-columns: repeat(2, 50%);
-    height: 400px;
+    width: 99%;
+    height: 500px;
     grid-gap: 1%;
     grid-template-areas: "quality safe" "delivery shipping";
-    margin-top: 8em;
+    margin-top: 2em;
   }
   @include max-mq($mb) {
     grid-template-columns: 100%;
     grid-gap: 1%;
     grid-template-areas: "quality" "safe" "delivery" "shipping";
-    height: 800px;
+    height: 1000px;
+    margin-top: 5em;
   }
   .quality,
   .safe,

@@ -12,9 +12,10 @@
     }
   }
   .menu-item {
+    height: 35px;
     float: left;
     position: relative;
-    padding: 0 2em 4em;
+    padding: 0 2em 5em;
 
     @include max-mq($bp-xl) {
       float: left;
@@ -59,6 +60,9 @@
     &.current-menu-item{
       >a{
         color: $primary_theme_color;
+        @include max-mq($ls) {
+          color: white;
+        }
       }
     }
     &:hover {
@@ -77,14 +81,18 @@
     &:hover {
       border-bottom: 2px solid white;
       transition: all 0.4s;
+        @include max-mq($mb) {
+          border: none;
+        }
     }
   }
   .sub-menu {
+    min-height: 160px;
     background-color: rgba(0, 0, 0, 0.5);
     float: left;
     left: -999em;
     position: absolute;
-    top: 68px;
+    top: 65px;
     z-index: -1;
     visibility: hidden;
     li {
@@ -130,6 +138,11 @@
       width: 40%;
       z-index: 999;
       overflow: auto;
+
+        @include max-mq($mb) {
+          width: 60%;
+          padding-top: 70px;
+        }
     }
   }
 

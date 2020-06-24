@@ -69,8 +69,11 @@
 				</div>
 			</div>
 		</header><!-- #masthead -->
-
+						
+		<span class="close-subscribe">
+		</span>				
 		<div id="subscribe">
 			<?php echo do_shortcode('[mc4wp_form id="961"]'); ?>
 		</div>
+		
 		<div id="content" class="site-content">

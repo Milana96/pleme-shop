@@ -1,3 +1,10 @@
+body.home {
+  .top-section-text {
+    h1, h4 {
+      color: white;
+    }
+  } 
+}
 .heading {
   position: relative;
   width: 100%;
@@ -7,9 +14,6 @@
   @include max-mq($ls) {
     padding: 1em;
     margin-top: 3em;
-  }
-  @include max-mq($sm) {
-    margin-top: 9em;
   }
     h1 {
       text-transform: uppercase;
@@ -46,7 +50,7 @@
         height: 600px;
       }
       @include max-mq($mb) {
-        height: 450px;
+        height: 400px;
       }
     }
   }
@@ -56,7 +60,6 @@
       display: none;
     }
   }
-
   .top-section-text {
     position: absolute;
     z-index: 1;
@@ -64,14 +67,19 @@
     left: 5%;
     text-transform: uppercase;
     @include max-mq($sm) {
+      width: 100%;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
     }
+    @include max-mq($mb) {
+      text-align: left;
+      padding-left: 1em;
+    }
     h1,
     h4 {
-      color: white;
+      color: black;
     }
     h1,
     h4 {
@@ -81,6 +89,11 @@
       letter-spacing: 3px;
       word-spacing: 5px;
       cursor: pointer;
+    }
+    @include max-mq($mb) {
+      h4 {
+        display: none;
+      }
     }
     .heading-1 {
       color: black;
@@ -109,7 +122,7 @@
           height: 600px;
         }
         @include max-mq($mb) {
-          height: 450px;
+          height: 400px;
         }
     }
   }
@@ -255,7 +268,7 @@
         height: 600px;
       }
       @include max-mq($mb) {
-        height: 450px;
+        height: 400px;
       }
     }
   }
@@ -338,13 +351,46 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+    @include max-mq($mb) {
+      margin: 0;
+    }
 }
 
 #sp-wp-carousel-free-id-171 {
   padding: 0;
 }
-
-#subscribe::before {
+.close-subscribe {
+  display: none;
+  position: absolute;
+  top: 30%;
+  right: 38%;
+  z-index: 99999;
+    @include max-mq($mac) {
+      top: 34%;
+    }
+    @include max-mq($ls) {
+      top: 30%;
+      right: 35%;
+    }
+    @include max-mq($lg) {
+      top: 34%;
+      right: 32%;
+    }
+    @include max-mq($sm) {
+      top: 34%;
+      right: 25%;
+    }
+    @include max-mq($mb) {
+      top: 36%;
+      right: 20%;
+    }
+    @include max-mq($xs) {
+      top: 36%;
+      right: 12%;
+    }
+}
+.close-subscribe::before {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -369,8 +415,13 @@
   border-radius: 10px;
   padding: 4em 2em;
   background: rgba(0, 0, 0, 0.8);
-  // color: white;
   z-index: 9999;
+
+    @include max-mq($mb) {
+      width: 280px;
+      height: 300px;
+      font-size: 12px;
+    }
     form {
       position: relative;
       h1, p, small, input {

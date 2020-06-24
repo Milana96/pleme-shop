@@ -7,6 +7,17 @@
     align-items: center;
     flex-wrap: wrap;
     @include container;
+      @include max-mq($mb) {
+        padding: 0;
+        margin: 0 auto;
+      }
+  }
+  .upsells {
+    h2 {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 2em;
+    }
   }
   .single-product {
     display: flex;
@@ -27,8 +38,9 @@
       max-width: 768px;
     }
     @include max-mq($mb) {
-      max-width: 400px;
+      max-width: 320px;
       padding: 0;
+      margin: 0 auto;
     }
     .woocommerce-message {
         border-top-color: $primary_theme_color;
@@ -106,6 +118,9 @@ body.single-product {
     .product {
       display: flex;
       flex-wrap: wrap;
+        @include max-mq($ls) {
+          // justify-content: center;
+        }
         @include max-mq($sm) {
           flex-direction: column;
         }
@@ -133,6 +148,12 @@ body.single-product {
           @include max-mq($ls) {
             max-width: calc(1024px - (2*30px));
           }
+          @include max-mq($mb) {
+            h2 {
+              font-size: 18px;
+              text-transform: uppercase;
+            }
+          }
           .products {
             width: 100%;
             margin: 0;
@@ -150,4 +171,11 @@ body.single-product {
   flex: 0 0 45%;
   width: 45%;
   max-width: 45%;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+  h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
 }

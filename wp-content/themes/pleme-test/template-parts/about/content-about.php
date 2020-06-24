@@ -1,4 +1,4 @@
-<div class="about-image-section" id="about">';
+<div class="about-image-section" id="about">
     <?php
     if (have_rows('flexible')) :
         // Loop through rows.

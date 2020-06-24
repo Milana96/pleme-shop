@@ -14,10 +14,12 @@ body.blog {
           flex-direction: column;
         }
       article {
+        width: 100%;
+        margin: 1em 0 !important;
+        padding: 0 !important;
         display: flex;
         flex: 0 0 47%;
         flex-direction: column;
-        margin: 1em;
         @include max-mq($sm) {
           margin-bottom: 2em;
         }

@@ -3,6 +3,7 @@
   max-width: 100%;
   padding: 0;
   margin: 0;
+
     .logo-menu-wrapper {
       @include max-mq($ls) {
         display: flex;
@@ -56,7 +57,7 @@
       width: 35px;
       margin: 0 0 60px 20px;
       position: relative;
-        @include max-mq($ls) {
+        @include max-mq($lg) {
           margin: 0 0 0 20px;
         }
         &:hover {

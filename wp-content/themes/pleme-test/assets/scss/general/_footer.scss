@@ -12,6 +12,10 @@
     padding: 4em 4em 2em;
   }
 
+  @include max-mq($mb) {
+    padding: 2em;
+  }
+
   span {
     margin-right: 10px;
   }
